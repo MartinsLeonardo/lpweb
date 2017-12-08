@@ -22,7 +22,7 @@ import {AdminModule} from './admin/admin.module';
   declarations: [
     AppComponent,
     PaginaNaoEncontradaComponent
-  ],
+    ],
   providers: [
 
   ],

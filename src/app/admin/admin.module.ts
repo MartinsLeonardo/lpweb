@@ -17,6 +17,14 @@ import {TurmaComponent} from './turma/turma.component';
 import {DisciplinasService} from './disciplinas.service';
 import {TurmasService} from './turmas.service';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
+import { PessoaComponent } from './pessoa/pessoa.component';
+import { CargoComponent } from './cargo/cargo.component';
+import { FuncaoComponent } from './funcao/funcao.component';
+import { CargosServiceService } from './cargos-service.service';
+import { PessoasServiceService } from './pessoas-service.service';
+import { FuncoesServiceService } from './funcoes-service.service';
+import { ListaDeFuncionariosComponent } from './lista-de-funcionarios/lista-de-funcionarios.component';
+import {CadastroDeFuncionarioComponent} from './cadastro-de-funcionario/cadastro-de-funcionario.component';
 
 @NgModule({
   imports: [
@@ -36,11 +44,19 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
     ListaDeDisciplinasComponent,
     ListaDeTurmasComponent,
     TurmaComponent,
-    PaginaNaoEncontradaComponent
-  ],
+    PaginaNaoEncontradaComponent,
+    PessoaComponent,
+    CargoComponent,
+    FuncaoComponent,
+    ListaDeFuncionariosComponent,
+    CadastroDeFuncionarioComponent
+  ], 
   providers: [
     DisciplinasService,
-    TurmasService
+    TurmasService,
+    CargosServiceService,
+    PessoasServiceService,
+    FuncoesServiceService
   ]
 })
 export class AdminModule {

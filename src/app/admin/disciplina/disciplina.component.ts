@@ -14,7 +14,7 @@ export class DisciplinaComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router) {
   }
-
+ 
   ngOnInit() {
     const id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.disciplinasService.getDisciplina(id)

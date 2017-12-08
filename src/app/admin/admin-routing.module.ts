@@ -9,10 +9,16 @@ import {TurmaComponent} from './turma/turma.component';
 import {CadastroDeDisciplinaComponent} from './cadastro-de-disciplina/cadastro-de-disciplina.component';
 import {CadastroDeTurmaComponent} from './cadastro-de-turma/cadastro-de-turma.component';
 import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
+import { CargoComponent } from './cargo/cargo.component';
+import {ListaDeFuncionariosComponent } from './lista-de-funcionarios/lista-de-funcionarios.component';
+import {CadastroDeFuncionarioComponent} from './cadastro-de-funcionario/cadastro-de-funcionario.component';
 
 const routes: Routes = [
   {
     path: 'admin', component: AdminComponent, children: [
+      {path: 'funcionario/:id/novo', component: CadastroDeFuncionarioComponent},
+      {path: 'funcionarios', component: ListaDeFuncionariosComponent},
+      {path: 'cargos/:id', component: CargoComponent},
       {path: 'disciplinas', component: ListaDeDisciplinasComponent},
       {path: 'disciplinas/:id', component: DisciplinaComponent},
       {path: 'disciplinas/:id/novo', component: CadastroDeDisciplinaComponent},
